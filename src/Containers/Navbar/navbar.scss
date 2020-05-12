@@ -1,0 +1,14 @@
+div.navbar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+    button {
+        width: 50%;
+        height: auto;
+    }
+    p {
+        display: grid;
+        justify-content: center;
+    }
+}

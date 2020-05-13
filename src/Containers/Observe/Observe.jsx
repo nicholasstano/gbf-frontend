@@ -4,38 +4,61 @@ import './observe.scss'
 const Observe = () => {
     return (
         <div className="observe">
+            <div className="observeTeacherInformation">
+                <h4>Teacher: Smith</h4>
+                <h4>Coach: Coapman</h4>
+            </div>
             <div className="observeHeader">
-                <p>Teacher: Smith</p>
-                <p>Coach: Coapman</p>
+                <h4>GBF Move:</h4>
+                <h4>Score:</h4>
+                <h4>Notes:</h4>
             </div>
-            <div className="observeTable">
-                <thead>
-                    <tr>
-                        <th>GBF Move:</th>
-                        <th>Score:</th>
-                        <th>Notes:</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Routines and Procedures 101</td>
-                        <td>3</td>
-                        <td><input></input></td>
-                    </tr>
-                    <tr>
-                        <td>Strong Voice</td>
-                        <td>3</td>
-                        <td><input></input></td>
-                    </tr>
-                    <tr>
-                        <td>What to Do</td>
-                        <td>4</td>
-                        <td><input></input></td>
-                    </tr>
-                </tbody>
+            <div className="observeBody">
+                <div>
+                    <select>
+                        <option value="rp">Routines & Procedures 101</option>
+                        <option value="sv">Strong Voice</option>
+                        <option value="wtd">What to Do</option>
+                    </select>
+                    <div className="observeButtons">
+                        <button>1</button>
+                        <button>2</button>
+                        <button>3</button>
+                        <button>4</button>
+                    </div>
+                    <input></input>
+                </div>
+                <div>
+                    <select>
+                        <option value="rp">Routines & Procedures 101</option>
+                        <option value="sv">Strong Voice</option>
+                        <option value="wtd">What to Do</option>
+                    </select>
+                    <div className="observeButtons">
+                        <button>1</button>
+                        <button>2</button>
+                        <button>3</button>
+                        <button>4</button>
+                    </div>
+                    <input></input>
+                </div>
+                <div>
+                    <select>
+                        <option value="rp">Routines & Procedures 101</option>
+                        <option value="sv">Strong Voice</option>
+                        <option value="wtd">What to Do</option>
+                    </select>
+                    <div className="observeButtons">
+                        <button>1</button>
+                        <button>2</button>
+                        <button>3</button>
+                        <button>4</button>
+                    </div>
+                    <input></input>
+                </div>
             </div>
-            <div>
-                <p>Lastest Action Steps:</p>
+            <div className="observeLatestActionSteps">
+                <h4>Lastest Action Steps:</h4>
             </div>
         </div>
     )

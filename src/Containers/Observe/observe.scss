@@ -1,18 +1,33 @@
 div.observe {
     padding: 10px;
-    div.observeHeader {
+    div.observeTeacherInformation {
         display: grid;
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 15rem 15rem;
         justify-content: left;
+        padding: 10px;
     }
 
-    div.observeTable {
+    div.observeHeader {
         display: grid;
-        justify-content: center;
-        thead {
+        grid-template-columns: 20rem 20rem 20rem;
+        justify-content: space-between;
+        padding: 10px;
+    }
+
+    div.observeBody div {
+        display: grid;
+        grid-template-columns: 20rem 20rem 20rem;
+        justify-content: space-between;
+        padding: 10px;
+        div.observeButtons {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            justify-content: space-between;
+            grid-template-columns: 25% 25% 25% 25%;
+            button {
+                width: 50%;
+            }
         }
+    }
+    div.observeLatestActionSteps {
+        padding: 10px;
     }
 }

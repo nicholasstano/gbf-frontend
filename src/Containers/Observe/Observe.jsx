@@ -5,8 +5,14 @@ const Observe = () => {
     return (
         <div className="observe">
             <div className="observeTeacherInformation">
-                <h4>Teacher: Smith</h4>
-                <h4>Coach: Coapman</h4>
+                <h4>Teacher:
+                    <select>
+                        <option value="plum">Plum</option>
+                        <option value="mustard">Mustard</option>
+                        <option value="peacock">Peacock</option>
+                    </select>
+                </h4>
+                <h4>Coach: Scarlet</h4>
             </div>
             <div className="observeHeader">
                 <h4>GBF Move:</h4>

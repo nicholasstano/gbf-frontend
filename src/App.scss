@@ -1,0 +1,9 @@
+div {
+  padding: 10px;
+  div.TeacherHeader {
+    display: grid;
+    grid-template-columns: 15rem 15rem;
+    justify-content: left;
+    padding: 10px;
+}
+}

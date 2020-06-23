@@ -9,7 +9,7 @@ function App() {
   return (
     <div>
       <Navbar />
-      <div className="TeacherHeader">
+      {/* <div className="TeacherHeader">
         <h4>Teacher:
           <select>
             <option value="plum">Plum</option>
@@ -18,10 +18,10 @@ function App() {
           </select>
         </h4>
         <h4>Coach: Scarlet</h4>
-      </div>
+      </div> */}
       <Observe />
-      <Feedback />
-      <Learn />
+      {/* <Feedback />
+      <Learn /> */}
     </div>
   );
 }

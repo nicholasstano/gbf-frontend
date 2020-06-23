@@ -6,7 +6,7 @@ let defaultState = {
 
 }
 
-export class Observe extends Component {
+export class ObserveForm extends Component {
 
     state = {
         teacherId: "",
@@ -19,7 +19,10 @@ export class Observe extends Component {
     }
 
     handleSubmit = () => {
-        debugger
+
+        var today = new Date();
+        var todaysDate = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+
         fetch(`${databaseUrl}/observations`, {
             method: 'POST',
             headers: {
@@ -29,7 +32,7 @@ export class Observe extends Component {
             body: JSON.stringify({
                 teacherId: 13,
                 coachId: 14,
-                date: this.state.date,
+                date: todaysDate,
                 move: this.state.move,
                 score: this.state.score,
                 notes: this.state.notes,
@@ -66,7 +69,6 @@ export class Observe extends Component {
         })
     }
     render() {
-        console.log(this.state)
         return (
             <div className="observe">
                 <div className="observeHeader">
@@ -78,6 +80,7 @@ export class Observe extends Component {
                     <form onSubmit={this.handleSubmit}>
                         <div>
                             <select name="move" value={this.state.move} onChange={this.handleTextChange} >
+                                <option>Select A Move</option>
                                 <option value="Routines and Procedures">Routines & Procedures 101</option>
                                 <option value="Strong Voice">Strong Voice</option>
                                 <option value="What to Do">What to Do</option>
@@ -125,35 +128,6 @@ export class Observe extends Component {
                         <button>Submit</button>
                     </form>
                 </div>
-
-                {/* <div>
-                    <select>
-                        <option value="rp">Routines & Procedures 101</option>
-                        <option value="sv">Strong Voice</option>
-                        <option value="wtd">What to Do</option>
-                    </select>
-                    <div className="observeButtons">
-                        <button>1</button>
-                        <button>2</button>
-                        <button>3</button>
-                        <button>4</button>
-                    </div>
-                    <input></input>
-                </div>
-                <div>
-                    <select>
-                        <option value="rp">Routines & Procedures 101</option>
-                        <option value="sv">Strong Voice</option>
-                        <option value="wtd">What to Do</option>
-                    </select>
-                    <div className="observeButtons">
-                        <button>1</button>
-                        <button>2</button>
-                        <button>3</button>
-                        <button>4</button>
-                    </div>
-                    <input></input>
-                </div> */}
                 <div className="observeLatestActionSteps">
                     <h4>Lastest Action Steps:</h4>
                 </div>
@@ -162,4 +136,4 @@ export class Observe extends Component {
     }
 }
 
-export default Observe
+export default ObserveForm

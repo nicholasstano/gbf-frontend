@@ -9,7 +9,12 @@ const Navbar = () => {
             <Link to="/observeform" onClick={() => window.scrollTo(0, 0)}>
                 <button>Observe</button>
             </Link>
-            <button>Feedback</button>
+            <Link to="/feedbackform" onClick={() => window.scrollTo(0, 0)}>
+                <button>Feedback</button>
+            </Link>
+            <Link to="/actionstepform" onClick={() => window.scrollTo(0, 0)}>
+                <button>Action Step</button>
+            </Link>
             <button>Learn</button>
             <button>Growth</button>
             <button>Lead</button>

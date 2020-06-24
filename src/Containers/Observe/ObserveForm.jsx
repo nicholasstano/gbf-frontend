@@ -2,16 +2,11 @@ import React, { Component } from 'react'
 import { databaseUrl } from '../../config'
 import './observe.scss'
 
-let defaultState = {
-
-}
-
 export class ObserveForm extends Component {
 
     state = {
         teacherId: "",
         coachId: "",
-        date: "",
         move: "",
         score: "",
         notes: "",
@@ -37,7 +32,6 @@ export class ObserveForm extends Component {
                 score: this.state.score,
                 notes: this.state.notes,
                 comments: this.state.comments,
-                is_released: false
             })
         })
     }

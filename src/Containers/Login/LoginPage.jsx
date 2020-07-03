@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Registration from './Registration'
 import Login from './Login'
+
 export default function LoginPage(props) {
 
     const [login, toggleLogin] = useState(true)

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Registration from './Registration'
 import Login from './Login'
-export default function LoginPage() {
+export default function LoginPage(props) {
 
     const [login, toggleLogin] = useState(true)
 
@@ -17,7 +17,7 @@ export default function LoginPage() {
                     <p onClick={() => toggleLogin(!login)}>Click here to Login</p>
                 </div>
             }
-            {login && login ? <Login /> : <Registration />}
+            {login && login ? <Login setUser={props.setUser} /> : <Registration />}
         </div>
     )
 }

@@ -27,6 +27,7 @@ export class Login extends Component {
                 }
                 else {
                     this.props.setUser(data)
+                    localStorage.setItem('userId', data.id)
                 }
             })
     }

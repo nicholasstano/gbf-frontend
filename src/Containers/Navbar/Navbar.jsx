@@ -5,14 +5,16 @@ import './navbar.scss'
 const Navbar = (props) => {
     return (
         <div className="navbar">
-            <p>Get Better Faster 2.0 |</p>
+            <Link to="/userhome" onClick={() => window.scrollTo(0, 0)}>
+                <p>Get Better Faster 2.0 |</p>
+            </Link>
             <Link to="/observe" onClick={() => window.scrollTo(0, 0)}>
                 <button>Observe</button>
             </Link>
-            <Link to="/feedbackform" onClick={() => window.scrollTo(0, 0)}>
+            <Link to="/feedback" onClick={() => window.scrollTo(0, 0)}>
                 <button>Feedback</button>
             </Link>
-            <Link to="/actionstepform" onClick={() => window.scrollTo(0, 0)}>
+            <Link to="/actionstep" onClick={() => window.scrollTo(0, 0)}>
                 <button>Action Step</button>
             </Link>
             <button>Learn</button>

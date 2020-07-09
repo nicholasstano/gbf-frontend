@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import Navbar from './Containers/Navbar/Navbar.jsx'
+import ActionStep from './Containers/ActionStep/ActionStep.jsx';
 import ActionStepForm from './Containers/ActionStep/ActionStepForm.jsx';
 import FeedbackForm from './Containers/Feedback/FeedbackForm';
+import Feedback from './Containers/Feedback/Feedback';
 import LoginPage from './Containers/Login/LoginPage.jsx';
 import Observe from './Containers/Observe/Observe';
 import ObserveForm from './Containers/Observe/ObserveForm';
@@ -59,8 +61,11 @@ export class App extends Component {
               <Route path="/userhome" render={() => { return (<div><UserHome user={this.state.user} /></div>) }} />
               <Route path="/observe" render={() => { return (<div><Observe /></div>) }} />
               <Route path="/observeform" render={() => { return (<div><ObserveForm /></div>) }} />
+              <Route path="/feedback" render={() => { return (<div><Feedback /></div>) }} />
               <Route path="/feedbackform" render={() => { return (<div><FeedbackForm /></div>) }} />
               <Route path="/actionstepform" render={() => { return (<div><ActionStepForm /></div>) }} />
+              <Route path="/actionstep" render={() => { return (<div><ActionStep /></div>) }} />
+
             </>
           }
         </Switch>

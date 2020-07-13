@@ -1,16 +1,16 @@
 import React, { Component } from 'react'
 import Navbar from './Containers/Navbar/Navbar.jsx'
 import ActionStep from './Containers/ActionStep/ActionStep.jsx';
-import ActionStepForm from './Containers/ActionStep/ActionStepForm.jsx';
-import FeedbackForm from './Containers/Feedback/FeedbackForm';
+// import ActionStepForm from './Containers/ActionStep/ActionStepForm.jsx';
+import CoachForms from './Containers/CoachForms/CoachForms.jsx';
+// import FeedbackForm from './Containers/Feedback/FeedbackForm';
 import Feedback from './Containers/Feedback/Feedback';
 import LoginPage from './Containers/Login/LoginPage.jsx';
 import Observe from './Containers/Observe/Observe';
-import ObserveForm from './Containers/Observe/ObserveForm';
+// import ObserveForm from './Containers/Observe/ObserveForm';
 import UserHome from './Containers/UserHome/UserHome';
 import { withRouter, Switch, Route } from 'react-router-dom'
 import { databaseBasicUrl } from '../src/config'
-
 import './App.scss';
 
 export class App extends Component {
@@ -24,6 +24,7 @@ export class App extends Component {
   logOutUser = () => {
     this.setState({ user: null })
     localStorage.removeItem('userId')
+    this.props.history.push('/')
   }
 
   componentDidMount() {
@@ -57,13 +58,14 @@ export class App extends Component {
             </>
             :
             <>
-              <Navbar logOutUser={this.logOutUser} />
+              <Navbar user={this.state.user} logOutUser={this.logOutUser} />
               <Route path="/userhome" render={() => { return (<div><UserHome user={this.state.user} /></div>) }} />
               <Route path="/observe" render={() => { return (<div><Observe /></div>) }} />
-              <Route path="/observeform" render={() => { return (<div><ObserveForm /></div>) }} />
               <Route path="/feedback" render={() => { return (<div><Feedback /></div>) }} />
-              <Route path="/feedbackform" render={() => { return (<div><FeedbackForm /></div>) }} />
-              <Route path="/actionstepform" render={() => { return (<div><ActionStepForm /></div>) }} />
+              <Route path="/coachforms" render={() => { return (<div><CoachForms user={this.state.user} /></div>) }} />
+              {/* <Route path="/observeform" render={() => { return (<div><ObserveForm /></div>) }} /> */}
+              {/* <Route path="/feedbackform" render={() => { return (<div><FeedbackForm /></div>) }} /> */}
+              {/* <Route path="/actionstepform" render={() => { return (<div><ActionStepForm /></div>) }} /> */}
               <Route path="/actionstep" render={() => { return (<div><ActionStep /></div>) }} />
 
             </>

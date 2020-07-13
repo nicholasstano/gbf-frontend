@@ -25,8 +25,8 @@ export class ObserveForm extends Component {
                 'Accept': 'application/json'
             },
             body: JSON.stringify({
-                teacherId: 13,
-                coachId: 14,
+                teacherId: this.props.teacherId,
+                coachId: this.props.coachId,
                 date: todaysDate,
                 move: this.state.move,
                 score: this.state.score,
@@ -64,67 +64,57 @@ export class ObserveForm extends Component {
     }
     render() {
         return (
-            <div className="observe">
-                <div className="observeHeader">
-                    <h4>GBF Move:</h4>
-                    <h4>Score:</h4>
-                    <h4>Notes:</h4>
-                </div>
-                <div className="observeBody">
-                    <form onSubmit={this.handleSubmit}>
-                        <div>
-                            <select name="move" value={this.state.move} onChange={this.handleTextChange} >
-                                <option>Select A Move</option>
-                                <option value="Routines and Procedures">Routines & Procedures 101</option>
-                                <option value="Strong Voice">Strong Voice</option>
-                                <option value="What to Do">What to Do</option>
-                            </select>
-                            <div className="observeButtons">
-                                <label>
-                                    <input
-                                        type="radio"
-                                        name="score"
-                                        value={this.state.score}
-                                        onClick={() => this.handleScore(1)}
-                                        className="form-check-input" />
+            <div className="observeForm">
+                <form onSubmit={this.handleSubmit}>
+                    <div>
+                        <select name="move" value={this.state.move} onChange={this.handleTextChange} >
+                            <option>Select A Move</option>
+                            <option value="Routines and Procedures">Routines & Procedures 101</option>
+                            <option value="Strong Voice">Strong Voice</option>
+                            <option value="What to Do">What to Do</option>
+                        </select>
+                        <div className="observeButtons">
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="score"
+                                    value={this.state.score}
+                                    onClick={() => this.handleScore(1)}
+                                    className="form-check-input" />
                                         1
                                 </label>
-                                <label>
-                                    <input
-                                        type="radio"
-                                        name="score"
-                                        value={this.state.score}
-                                        onClick={() => this.handleScore(2)}
-                                        className="form-check-input" />
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="score"
+                                    value={this.state.score}
+                                    onClick={() => this.handleScore(2)}
+                                    className="form-check-input" />
                                         2
                                 </label>
-                                <label>
-                                    <input
-                                        type="radio"
-                                        name="score"
-                                        value={this.state.score}
-                                        onClick={() => this.handleScore(3)}
-                                        className="form-check-input" />
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="score"
+                                    value={this.state.score}
+                                    onClick={() => this.handleScore(3)}
+                                    className="form-check-input" />
                                         3
                                 </label>
-                                <label>
-                                    <input
-                                        type="radio"
-                                        name="score"
-                                        value={this.state.score}
-                                        onClick={() => this.handleScore(4)}
-                                        className="form-check-input" />
+                            <label>
+                                <input
+                                    type="radio"
+                                    name="score"
+                                    value={this.state.score}
+                                    onClick={() => this.handleScore(4)}
+                                    className="form-check-input" />
                                         4
                                 </label>
-                            </div>
-                            <input type="text" name="notes" value={this.state.notes} placeholder="Notes" onChange={this.handleTextChange}></input>
                         </div>
-                        <button>Submit</button>
-                    </form>
-                </div>
-                <div className="observeLatestActionSteps">
-                    <h4>Lastest Action Steps:</h4>
-                </div>
+                        <input type="text" name="notes" value={this.state.notes} placeholder="Notes" onChange={this.handleTextChange}></input>
+                    </div>
+                    <button>Submit</button>
+                </form>
             </div>
         )
     }

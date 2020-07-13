@@ -27,8 +27,8 @@ export class FeedbackForm extends Component {
                 'Accept': 'application/json'
             },
             body: JSON.stringify({
-                teacherId: 13,
-                coachId: 14,
+                teacherId: this.props.teacherId,
+                coachId: this.props.coachId,
                 action_step_id: 1,
                 observation_id: 1,
                 date: todaysDate,
@@ -70,26 +70,16 @@ export class FeedbackForm extends Component {
     }
     render() {
         return (
-            <div className="observe">
-                <div className="observeHeader">
-                    <h4>GBF Move:</h4>
-                    <h4>Score:</h4>
-                    <h4>Notes:</h4>
-                </div>
-                <div className="observeBody">
-                    <form onSubmit={this.handleSubmit}>
-                        <div>
-                            <input type="text" name="praise" value={this.state.praise} placeholder="Praise" onChange={this.handleTextChange}></input>
-                            <input type="text" name="quickHits" value={this.state.quickHits} placeholder="Quick Hits" onChange={this.handleTextChange}></input>
-                            <input type="text" name="seeIt" value={this.state.seeIt} placeholder="See It" onChange={this.handleTextChange}></input>
-                            <input type="text" name="nameIt" value={this.state.nameIt} placeholder="Name It" onChange={this.handleTextChange}></input>                            <input type="text" name="doIt" value={this.state.doIt} placeholder="Do It" onChange={this.handleTextChange}></input>
-                        </div>
-                        <button>Submit</button>
-                    </form>
-                </div>
-                <div className="observeLatestActionSteps">
-                    <h4>Lastest Action Steps:</h4>
-                </div>
+            <div className="feedbackForm">
+                <form onSubmit={this.handleSubmit}>
+                    <div>
+                        <input type="text" name="praise" value={this.state.praise} placeholder="Praise" onChange={this.handleTextChange}></input>
+                        <input type="text" name="quickHits" value={this.state.quickHits} placeholder="Quick Hits" onChange={this.handleTextChange}></input>
+                        <input type="text" name="seeIt" value={this.state.seeIt} placeholder="See It" onChange={this.handleTextChange}></input>
+                        <input type="text" name="nameIt" value={this.state.nameIt} placeholder="Name It" onChange={this.handleTextChange}></input>                            <input type="text" name="doIt" value={this.state.doIt} placeholder="Do It" onChange={this.handleTextChange}></input>
+                    </div>
+                    <button>Submit</button>
+                </form>
             </div>
         )
     }

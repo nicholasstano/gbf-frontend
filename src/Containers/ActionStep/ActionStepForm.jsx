@@ -23,8 +23,8 @@ export class ActionStepForm extends Component {
                 'Accept': 'application/json'
             },
             body: JSON.stringify({
-                teacherId: 13,
-                coachId: 14,
+                teacherId: this.props.teacherId,
+                coachId: this.props.coachId,
                 date: todaysDate,
                 short_name: this.state.shortName,
                 long_text: this.state.longText,
@@ -59,24 +59,14 @@ export class ActionStepForm extends Component {
     }
     render() {
         return (
-            <div className="observe">
-                <div className="observeHeader">
-                    <h4>GBF Move:</h4>
-                    <h4>Score:</h4>
-                    <h4>Notes:</h4>
-                </div>
-                <div className="observeBody">
-                    <form onSubmit={this.handleSubmit}>
-                        <div>
-                            <input type="text" name="shortName" value={this.state.shortName} placeholder="Short Description" onChange={this.handleTextChange}></input>
-                            <input type="text" name="longText" value={this.state.longText} placeholder="Long Text Description" onChange={this.handleTextChange}></input>
-                        </div>
-                        <button>Submit</button>
-                    </form>
-                </div>
-                <div className="observeLatestActionSteps">
-                    <h4>Lastest Action Steps:</h4>
-                </div>
+            <div className="actionStepForm">
+                <form onSubmit={this.handleSubmit}>
+                    <div>
+                        <input type="text" name="shortName" value={this.state.shortName} placeholder="Short Description" onChange={this.handleTextChange}></input>
+                        <input type="text" name="longText" value={this.state.longText} placeholder="Long Text Description" onChange={this.handleTextChange}></input>
+                    </div>
+                    <button>Submit</button>
+                </form>
             </div>
         )
     }

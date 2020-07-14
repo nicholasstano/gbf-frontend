@@ -63,11 +63,7 @@ export class App extends Component {
               <Route path="/observe" render={() => { return (<div><Observe /></div>) }} />
               <Route path="/feedback" render={() => { return (<div><Feedback /></div>) }} />
               <Route path="/coachforms" render={() => { return (<div><CoachForms user={this.state.user} /></div>) }} />
-              {/* <Route path="/observeform" render={() => { return (<div><ObserveForm /></div>) }} /> */}
-              {/* <Route path="/feedbackform" render={() => { return (<div><FeedbackForm /></div>) }} /> */}
-              {/* <Route path="/actionstepform" render={() => { return (<div><ActionStepForm /></div>) }} /> */}
-              <Route path="/actionstep" render={() => { return (<div><ActionStep /></div>) }} />
-
+              <Route path="/actionstep" render={() => { return (<div><ActionStep user={this.state.user} /></div>) }} />
             </>
           }
         </Switch>

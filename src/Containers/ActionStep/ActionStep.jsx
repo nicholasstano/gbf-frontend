@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './actionstep.scss'
 
 export class ActionStep extends Component {
 
@@ -18,7 +19,7 @@ export class ActionStep extends Component {
     render() {
         let openTeacherFeedback = this.props.user.feedback.filter(feedback => !feedback.is_assigned)
         let currentActionSteps = openTeacherFeedback.map(fb =>
-            <div key={fb.id}>
+            <div className="currentActionSteps" key={fb.id}>
                 <p>{fb.action_step.long_text}</p>
                 <p>Date Assigned: {fb.action_step.date.slice(0, 10)}</p>
                 <p>Skill: {fb.move.name.split(".")[1]}</p>

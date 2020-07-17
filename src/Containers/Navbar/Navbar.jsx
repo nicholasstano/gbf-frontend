@@ -22,9 +22,9 @@ const Navbar = (props) => {
             <Link to="/actionstep" onClick={() => window.scrollTo(0, 0)}>
                 <button>Action Step</button>
             </Link>
-            <button>Learn</button>
+            {/* <button>Learn</button>
             <button>Growth</button>
-            <button>Lead</button>
+            <button>Lead</button> */}
             <button onClick={() => props.logOutUser()}>Log Out</button>
         </div>
     )

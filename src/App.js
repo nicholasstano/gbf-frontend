@@ -59,7 +59,9 @@ export class App extends Component {
             </>
             :
             <>
+              <div id="nav-bucket">
               <Navbar user={this.state.user} logOutUser={this.logOutUser} />
+              </div>
               <Route path="/userhome" render={() => { return (<div><UserHome user={this.state.user} /></div>) }} />
               <Route path="/observe" render={() => { return (<div><Observe /></div>) }} />
               <Route path="/feedback" render={() => { return (<div><Feedback /></div>) }} />

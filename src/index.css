@@ -1,3 +1,8 @@
+div {
+  font-family: 'Arvo';
+  color: #555;
+}
+
 body {
   margin: 0;
   font-family: 'Arvo';
@@ -12,6 +17,13 @@ code {
 
 div#nav-bucket {
   border-bottom: 0.5px solid black;
+}
+
+select {
+  width: 300px;
+  padding: 5px 5px;
+  margin: 10px 5px;
+  border: 1px solid;
 }
 
 @font-face {

@@ -1,9 +1,39 @@
+/* This is the global css page */
 div {
   padding: 10px;
+  font-family: 'Arvo';
+  color: #555;
+
   div.TeacherHeader {
     display: grid;
     grid-template-columns: 15rem 15rem;
     justify-content: left;
     padding: 10px;
+  }
 }
+
+body {
+  margin: 0;
+  font-family: 'Arvo';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+div#nav-bucket {
+  border-bottom: 0.5px solid black;
+}
+
+select {
+  width: 300px;
+  padding: 5px;
+  margin: 10px 5px;
+  border: 1px solid;
+}
+@font-face {
+  font-family: 'Arvo';
+  src: local('Arvo'), url("./fonts/Arvo/Arvo-Regular.ttf") format('truetype');
 }

@@ -6,7 +6,7 @@ const Navbar = (props) => {
     return (
         <div className="navbar">
             <Link to="/userhome" onClick={() => window.scrollTo(0, 0)}>
-                <p>Get Better Faster 2.0 |</p>
+                <button>Get Better Faster 2.0</button>
             </Link>
             {props.user.is_coach &&
                 <Link to="/coachforms" onClick={() => window.scrollTo(0, 0)}>

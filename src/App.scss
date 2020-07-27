@@ -1,9 +1,56 @@
+/* This is the global css page */
 div {
   padding: 10px;
+  font-family: 'Lato';
+  color: #555;
+
   div.TeacherHeader {
     display: grid;
     grid-template-columns: 15rem 15rem;
     justify-content: left;
     padding: 10px;
+  }
 }
+
+div h1 {
+  font-family: 'Arvo';
+}
+
+body {
+  margin: 0;
+  font-family: 'Lato';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+div#nav-bucket {
+  border-bottom: 0.5px solid black;
+}
+
+select {
+  width: 300px;
+  padding: 5px;
+  margin: 10px 5px;
+  border: 1px solid;
+}
+
+table,
+td,
+th {
+  border: 1px solid #555;
+  border-collapse: collapse;
+  width: 50%;
+  text-align: center;
+}
+@font-face {
+  font-family: 'Arvo';
+  src: local('Arvo'), url("./fonts/Arvo/Arvo-Regular.ttf") format('truetype');
+}
+@font-face {
+  font-family: 'Lato';
+  src: local('Lato'), url("./fonts/Lato/Lato-Regular.ttf") format('truetype');
 }

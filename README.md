@@ -1,4 +1,14 @@
+## How to run the app in development mode:
+
+1. From the command line, run `yarn start`.  
+2. Open [`http://localhost:4000`](http://localhost:4000) to view the app in the browser.
+
+Note: The port was configured in the `package.json` file.
+
+## Credits
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+---- Adjust below here as needed
 
 ## Available Scripts
 

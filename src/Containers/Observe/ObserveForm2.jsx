@@ -45,7 +45,7 @@ export class ObserveForm2 extends Component {
             .then(res => res.json())
             .then(users => {
                 if (this._isMounted) {
-                    this.setState({ teachers: users.filter(user => user.is_teacher) })
+                    this.setState({ teachers: users.filter(user => user.is_teacher && (user.coachInformation.coachId === this.state.coachId)) })
                 }
             })
     }
@@ -146,7 +146,7 @@ export class ObserveForm2 extends Component {
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
-                    {this.state.teachers.length > 1 &&
+                    {this.state.teachers.length >= 1 &&
                         <select name="teacherId" value={this.state.teacherId} onChange={this.handleIdSelect} >
                             <option>Select A Teacher</option>
                             {this.state.teachers.map(teacher => <option key={teacher.teacher_name} value={teacher.id}>{teacher.teacher_name}</option>)}
